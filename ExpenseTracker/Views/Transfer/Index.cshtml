@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Transfer>
+@inject IUnitOfWork UnitOfWork
+
+
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+
+
+<div class="add-button-container">
+<a class="btn add-button" asp-controller="Transfer" asp-action="Create" method="Get">+ Add Transfer</a>
+</div>
+
+
+@if (Model.Count() > 0)
+{
+
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(A => A.SourceAccountName)</th>
+                <th>@Html.DisplayNameFor(A => A.RecipientAccountName)</th>
+                <th>@Html.DisplayNameFor(A => A.Amount)</th>
+                <th>@Html.DisplayNameFor(A => A.Date)</th>
+
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            @foreach (var Transfer in Model)
+            {
+                <tr>
+                    <td hidden>@Transfer.Id</td>
+                    <td >@Transfer.SourceAccountName</td>
+                    <td>@Transfer.RecipientAccountName</td>
+                    <td>@Transfer.Amount</td>
+                    <td>@Transfer.Date</td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Transfer" asp-action="Details" asp-route-id="@Transfer.Id">Details</a>
+                    </td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Transfer" asp-action="Edit" asp-route-id="@Transfer.Id">Edit</a>
+                    </td>
+
+                    <td>
+                        <a id="Delete" class="btn table-btn" asp-controller="Transfer" asp-action="Delete" asp-route-id="@Transfer.Id">Delete</a>
+                    </td>
+
+
+
+
+
+                </tr>
+
+
+            }
+        </tbody>
+
+
+    </table>
+
+
+}
+else
+{
+    <h1>No Accounts</h1>
+}

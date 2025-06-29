@@ -1,0 +1,18 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.3.3",
+      "destination": "wwwroot/bootstrap/"
+    },
+    {
+      "library": "multiple-select@1.2.3",
+      "destination": "wwwroot/lib/multiple-select/"
+    },
+    {
+      "library": "slim.js@4.0.7",
+      "destination": "wwwroot/slim.js/"
+    }
+  ]
+}

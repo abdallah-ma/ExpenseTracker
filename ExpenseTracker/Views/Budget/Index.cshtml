@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Budget>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="add-button-container">
+<a class="btn add-button" asp-controller="Budget" asp-action="Create" method="Get">+ Create Budget</a>
+</div>
+
+@if (Model.Count() > 0)
+{
+
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(B => B.Name)</th>
+                <th>@Html.DisplayNameFor(B => B.Limit)</th>
+                <th>@Html.DisplayNameFor(B => B.Period)</th>
+                <th>@Html.DisplayNameFor(B => B.StartDate)</th>
+                <th>@Html.DisplayNameFor(B => B.EndDate)</th>
+                <th>@Html.DisplayNameFor(B => B.Category)</th>
+                <th hidden>Details</th>
+                <th hidden>Edit</th>
+                <th hidden>Delete</th>
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            @foreach (var Budget in Model)
+            {
+                <tr data-budget-id="@Budget.Id">
+                    
+                    <td>@Budget.Name</td>
+                    <td>@Budget.Limit</td>
+                    <td>@Budget.Period</td>
+                    <td>@Budget.StartDate.ToString("yyyy-MM-dd")</td>
+                    <td id="EndDate-@Budget.Id">@Budget.EndDate.ToString("yyyy-MM-dd")</td>
+                    <td>@Budget.Category</td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Budget" asp-action="Details" asp-route-id="@Budget.Id">Details</a>
+                    </td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Budget" asp-action="Edit" asp-route-id="@Budget.Id">Edit</a>
+                    </td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Budget" asp-action="Delete" asp-route-id="@Budget.Id">Delete</a>
+                    </td>
+
+
+
+
+
+                </tr>
+
+
+            }
+        </tbody>
+
+
+    </table>
+
+}
+else
+{
+    <h1>No Budgets</h1>
+}
+
+
+
+@* @section UpdateScript { *@
+@*     <script> *@
+@*                 function updateBudgets() { *@
+@*             $('tr[data-budget-id]').each(function () { *@
+@*                 var row = $(this); *@
+@*                 var budgetId = row.data('budget-id'); *@
+@*                 $.ajax({ *@
+@*                     type: "GET", *@
+@*                     url: '@Url.Action("CheckDate", "Budget", new { id = "__id__" })'.replace('__id__', budgetId), *@
+@*                     dataType: "json", *@
+@*                     success: function (data) { *@
+@*                         if (data && data.endDate) { *@
+@*                             var dateOnly = data.endDate.split('T')[0]; *@
+@*                             $("#EndDate-" + budgetId).text(dateOnly);                        } *@
+@*                     }, *@
+@*                     error: function (xhr, status, error) { *@
+@*                         console.error("Error fetching data for budget " + budgetId + ": " + error); *@
+@*                     } *@
+@*                 }); *@
+@*             }); *@
+@*         } *@
+
+
+@*         $(document).ready(function () { *@
+@*             // Run once on page load *@
+@*             updateBudgets(); *@
+@*             // Run every 30 seconds (30000 ms) *@
+@*             setTimeout(updateBudgets, 60 * 1000); *@
+@*         }); *@
+@*     </script> *@
+@* } *@

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Income>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="add-button-container">
+<a class="btn add-button" asp-controller="Income" asp-action="Create" method="Get">+ Add Income</a>
+</div>
+
+
+@if (Model.Count() > 0)
+{
+
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(I => I.Amount)</th>
+                <th>@Html.DisplayNameFor(I => I.Date)</th>
+                <th>@Html.DisplayNameFor(I => I.AccountName)</th>
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            @foreach (var Income in Model)
+            {
+                <tr>
+                    <td hidden>@Income.Id</td>
+                    <td>@Income.Amount</td>
+                    <td>@Income.Date</td>
+                    <td> @Income.AccountName </td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Income" asp-action="Details" asp-route-id="@Income.Id">Details</a>
+                    </td>
+
+                    <td>
+                        <a class="btn table-btn" asp-controller="Income" asp-action="Edit" asp-route-id="@Income.Id">Edit</a>
+                    </td>
+
+                    <td>
+                        <a id="Delete" class="btn table-btn" asp-controller="Income" asp-action="Delete" asp-route-id="@Income.Id">Delete</a>
+                    </td>
+
+
+
+
+
+                </tr>
+
+
+            }
+        </tbody>
+
+
+    </table>
+
+
+}
+else
+{
+    <h1>No Income</h1>
+}
+
+

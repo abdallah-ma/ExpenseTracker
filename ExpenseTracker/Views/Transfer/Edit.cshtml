@@ -1,0 +1,76 @@
+﻿@model TransferViewModel
+@inject IUnitOfWork UnitOfWork
+
+@{
+    ViewData["Title"] = "Edit Transfer";
+    var Accounts = await UnitOfWork.AccountRepository.GetAllAsync();
+}
+
+
+
+
+
+<form asp-controller="Transfer" asp-action="Edit">
+
+
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Source Account">Source Account</label>
+
+        <select asp-for="SourceAccountName" class="form-control">
+            @{
+                foreach (var Account in Accounts)
+                {
+                    <option value="@Account.Name">@Account.Name</option>
+                }
+            }
+        </select>
+
+        <span asp-validation-for="SourceAccountName" class="text-danger"> </span>
+    </div>
+
+    <div class="form-group">
+
+        <label for="Recipient Account" class="col-form-label">Recipient Account</label>
+        <select asp-for="RecipientAccountName" class="form-control">
+
+
+            @{
+                foreach (var Account in Accounts)
+                {
+                    <option value="@Account.Name">@Account.Name</option>
+                }
+            }
+
+
+
+        </select>
+
+
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Amount">Amount</label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"> </span>
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" for="Date">Date</label>
+
+        <input asp-for="Date" class="form-control" type="datetime-local" value="1999-01-01T19:30" />
+
+    </div>
+
+    <br />
+
+
+
+    <input type="submit" value="Save" class="btn btn-primary"></input> |
+    <a asp-Controller="Transfer" asp-action="Index" class="btn btn-dark">Back</a>
+</form>
+
+

@@ -1,0 +1,31 @@
+﻿<script>
+    function updateBudgets() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("CheckDate", "Budget")',
+            dataType: "json",
+            success: function (data) {
+                console.log("Dates Updated Successfully");
+            },
+            error: function (xhr, status, error) {
+                console.error("Error updating budgets: " + error);
+            }
+        });
+        // Store the last run time
+        localStorage.setItem('lastBudgetUpdate', Date.now());
+    }
+
+    $(document).ready(function () {
+        function checkAndUpdateBudgets() {
+            var lastRun = parseInt(localStorage.getItem('lastBudgetUpdate') || "0", 10);
+            var now = Date.now();
+            if (now - lastRun >= 60 * 1000) { // 1 minute
+                updateBudgets();
+            }
+        }
+        // Check immediately on page load
+        checkAndUpdateBudgets();
+        // Then check every 10 seconds (or any short interval)
+        setInterval(checkAndUpdateBudgets, 10 * 1000);
+    });
+</script>

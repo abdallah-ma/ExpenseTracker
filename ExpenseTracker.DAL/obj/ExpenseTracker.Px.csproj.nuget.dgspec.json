@@ -1,0 +1,223 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.PL\\ExpenseTracker.Px.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
+        "projectName": "ExpenseTracker.BLL",
+        "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
+        "packagesPath": "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visual studio shared comp\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Abdallah Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj": {
+                "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.PL\\ExpenseTracker.Px.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.PL\\ExpenseTracker.Px.csproj",
+        "projectName": "ExpenseTracker.Px",
+        "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.PL\\ExpenseTracker.Px.csproj",
+        "packagesPath": "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.PL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visual studio shared comp\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Abdallah Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {
+                "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj",
+        "projectName": "ExpenseTracker.PL",
+        "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj",
+        "packagesPath": "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visual studio shared comp\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Abdallah Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+/* _content/ExpenseTracker/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-bddmc6yalx] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a[b-bddmc6yalx] {
+    color: #0077cc;
+}
+
+.btn-primary[b-bddmc6yalx] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-bddmc6yalx], .nav-pills .show > .nav-link[b-bddmc6yalx] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top[b-bddmc6yalx] {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom[b-bddmc6yalx] {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-bddmc6yalx] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-bddmc6yalx] {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer[b-bddmc6yalx] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+#other{
+    display: none;
+}
+.multi-select-container {
+    display: inline-block;
+    position: relative;
+}
+
+.multi-select-menu {
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    float: left;
+    min-width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    padding: 0.4em 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+    .multi-select-menu input {
+        margin-right: 0.3em;
+        vertical-align: 0.1em;
+    }
+
+.multi-select-button {
+    display: inline-block;
+    font-size: 0.875em;
+    padding: 0.2em 0.6em;
+    max-width: 20em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: -0.5em;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+    .multi-select-button:after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0.4em 0.4em 0 0.4em;
+        border-color: #999 transparent transparent transparent;
+        margin-left: 0.4em;
+        vertical-align: 0.1em;
+    }
+
+.multi-select-container--open .multi-select-menu {
+    display: block;
+}
+
+.multi-select-container--open .multi-select-button:after {
+    border-width: 0 0.4em 0.4em 0.4em;
+    border-color: transparent transparent #999 transparent;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.bluebutton {
+    float: right;
+    background-color: #3F7ACE;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    vertical-align: central;
+    display: block;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.bluebutton:hover {
+    float: right;
+    background-color: #3F7ACE;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    vertical-align: central;
+    display: block;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.navbar-style {
+    background-color: #187DE7;
+    height: 55px;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-layout{
+    display: flex;
+    list-style-type: none;
+    align-items:center;
+    margin-top: 10px;
+}
+
+
+
+.navbar-button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration:none;
+    color:aliceblue;
+}
+
+.navitem{
+    margin-left: 15px;
+}
+
+.navbar-layout li:hover{
+    background-color:aliceblue;
+}
+
+
+
+.navbar-containter{
+    width:stretch;
+    height: 50px;
+    margin-top:0px;
+    margin-left:10px;
+}
+
+td {
+    padding: 10px;
+    font-family: Calibri;
+}
+
+th{
+    padding: 10px;
+    font-family: Arial;
+}
+
+table {
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+.table-btn {
+    text-decoration: none;
+    background-color: #E78218;
+    border-radius: 5px;
+}
+
+.add-button-container{
+    position: relative;
+}
+
+.add-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color:#003366;
+    color:aliceblue;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

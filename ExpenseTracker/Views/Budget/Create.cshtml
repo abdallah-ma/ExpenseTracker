@@ -1,0 +1,173 @@
+﻿@using ExpenseTracker.BLL.Interfaces
+@model BudgetViewModel
+@inject IUnitOfWork _UnitOfWork
+@using System.Text.Json
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section Jquery{
+<script src="~/lib/jquery/dist/jquery.js"></script>
+}
+
+
+
+@section JqueryMultipleSelect{
+<script src="~/js/jquery.multi-select.js"></script>
+<link href="~/css/multi-select.css" rel="stylesheet" />
+<link href="~/css/multi-select.dist.css" rel="stylesheet" />
+<link href="~/css/multi-select.dev.css" rel="stylesheet" />
+}
+
+
+<form asp-controller="Budget" asp-action="Create">
+
+
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"> </span>
+    </div>
+
+    <div class="form-group">
+
+        <label for="Accounts" form="form-control">Accounts</label>
+        <select asp-for="Accounts" name ="Accounts" id="Accounts" class="form-control" multiple="multiple">
+
+
+            @{
+                var Accounts = await _UnitOfWork.AccountRepository.GetAllAsync();
+                foreach(var Account in Accounts)
+                {
+                    <option value=@Account.Id> @Account.Name </option>
+                }
+
+            }
+    
+
+        </select>
+
+        
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Limit">Limit</label>
+        <input asp-for="Limit" class="form-control" />
+        <span asp-validation-for="Limit" class="text-danger"> </span>
+
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Period">Period</label>
+        <select id="Period" asp-for ="Period" class="form-control">
+            <option value="Week">Week</option>
+            <option value="Month">Month</option>
+            <option value="Month">Year</option>
+            <option value="OneTime">One Time</option>
+        </select>
+
+    </div>
+
+    <br />
+
+
+    <div class="form-group" id="other">
+
+        <label class="col-form-label" for="StartDate" >Start date</label>
+        <input asp-for="StartDate" class="form-control" type="datetime-local" />
+        <span asp-validation-for="StartDate" class="text-danger"> </span>
+        
+        <label class="col-form-label" for="End date" >End date</label>
+        <input asp-for="EndDate" class="form-control" type="datetime-local"  id="EndDate"/>
+        <span asp-validation-for="EndDate" class="text-danger"> </span>
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Type">Type</label>
+        <select asp-for="Category" class="form-control">
+            <option>Food & Drink</option>
+        </select>
+
+    </div>
+
+    <br />
+
+    <input type="submit" value="Create" class="btn btn-primary" id="Submit"></input> |
+    <a asp-Controller="Account" asp-action="Index" class="btn btn-dark">Back</a>
+</form>
+
+
+
+
+@section PeriodScript {
+    <script>
+        document.querySelector("#Period").addEventListener("change", function(e) {
+            const other = document.querySelector("#other");
+
+            
+
+            if (e.target.value === "OneTime")
+            {
+
+                other.style.display = "block";
+            }
+            else
+            {
+                other.style.display = "none";
+            }
+
+        });
+    </script>
+}
+
+
+@section SetDateOnSubmission{
+
+    <script>
+        (document).querySelector("#Submit").addEventListener("click" , function(e) {
+
+        var now = new Date();
+        var offset = now.getTimezoneOffset();
+        now = new Date(now.getTime() - (offset * 60 * 1000));
+        var formatted = now.toISOString().slice(0,16);
+        document.querySelector('input[name="StartDate"]').value = formatted;
+
+        });
+
+    </script>
+
+
+
+
+
+
+}
+
+
+
+@section MultipleSelect{
+
+    <script type="text/javascript">
+
+        
+
+
+           $(document).ready(function() {
+          $('#Accounts').multiSelect();
+        });
+
+
+    </script>
+
+}
+
+

@@ -1,0 +1,46 @@
+﻿@model IncomeViewModel
+
+
+@{
+    ViewData["Title"] = "Income Details";
+}
+
+
+
+
+
+    <div>
+        
+    
+        <div>
+            <lable class="col-form-label" for="Amount">Amount</lable>
+            <input asp-for="Amount" class="form-control" readonly/>
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+
+            <label class="col-form-label" for="Date">Date</label>
+            <input asp-for="Date" type="Date" class="form-control" readonly/>
+            <span asp-validation-for="Date" class="text-danger"> </span>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+
+            <label class="col-form-label" for="Type">Account</label>
+            <input asp-for="AccountName" class="form-control" readonly />
+        </div>
+
+        <br />
+    <a asp-controller="Income" asp-action="Index" class="btn btn-dark">Back</a>
+
+    </div>
+    
+
+
+
+

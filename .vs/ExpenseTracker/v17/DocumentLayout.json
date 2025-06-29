@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE39FEB1-586F-4F3F-9B00-8C8291B3033F}|ExpenseTracker\\ExpenseTracker.PL.csproj|c:\\users\\abdallah mahmoud\\source\\repos\\expensetracker\\expensetracker\\views\\budget\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE39FEB1-586F-4F3F-9B00-8C8291B3033F}|ExpenseTracker\\ExpenseTracker.PL.csproj|solutionrelative:expensetracker\\views\\budget\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 43,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\Views\\Budget\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Budget\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\Views\\Budget\\Edit.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Budget\\Edit.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T21:27:34.306Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

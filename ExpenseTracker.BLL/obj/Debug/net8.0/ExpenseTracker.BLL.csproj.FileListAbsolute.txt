@@ -1,0 +1,15 @@
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.deps.json
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.dll
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.pdb
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.DAL.dll
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.DAL.pdb
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.csproj.AssemblyReference.cache
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.AssemblyInfoInputs.cache
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.AssemblyInfo.cs
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseT.05C824B1.Up2Date
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.dll
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\refint\ExpenseTracker.BLL.dll
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.pdb
+C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ref\ExpenseTracker.BLL.dll

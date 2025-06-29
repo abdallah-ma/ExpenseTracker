@@ -1,0 +1,65 @@
+﻿@using ExpenseTracker.BLL.Interfaces
+@model ExpenseViewModel
+@inject IUnitOfWork UnitOfWork
+
+@{
+    ViewData["Title"] = "Add Expense";
+}
+
+
+<form asp-controller="Expense" asp-action="Create">
+    <div class="form-group">
+
+        <label class="col-form-label" for="Amount">Amount</label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"> </span>
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-form-label" for="Category">Category</label>
+
+        <select asp-for="Category" class="form-control">
+            <option value="Food&Drink">Food&Drink</option>
+            <option value="Clothing">Clothing</option>
+        </select>
+
+        <span asp-validation-for="Category" class="text-danger"> </span>
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" for="Date">Date</label>
+
+        <input asp-for="Date" type="Date" class="form-control"/>
+
+        <span asp-validation-for="Date" class="text-danger"> </span>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-form-label" for="Account">Account</label>
+
+        <select asp-for="AccountName" class="form-control">
+
+            @{
+                var Accounts = await UnitOfWork.AccountRepository.GetAllAsync();
+                foreach (var Account in Accounts)
+                {
+                    <option value="@Account.Name">@Account.Name</option>
+                }
+
+            }
+
+        </select>
+
+        <span asp-validation-for="AccountName" class="text-danger"> </span>
+
+    </div>
+
+    <br />
+
+    <input type="submit" value="Create" class="btn btn-primary"> |
+    <a asp-Controller="Expense" asp-action="Index" class="btn btn-dark">Back</a>
+</form>
+

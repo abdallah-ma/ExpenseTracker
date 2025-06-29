@@ -1,0 +1,86 @@
+﻿@using ExpenseTracker.BLL.Specifications
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Expense Tracker</title>
+
+    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar-style">
+
+
+            <div class="container-fluid">
+
+                
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-layout">
+                        
+
+                        <li class="navitem">
+                            <a class="navbar-button" asp-controller="Account" asp-action="Index" asp-route-PageNo="1" asp-route-PageSize="5" >Accounts</a>
+                        </li>
+
+                        <li class="navitem">
+                            <a class="navbar-button" asp-controller="Budget" asp-action="Index">Budgets</a>
+                        </li>
+
+                        <li class="navitem">
+                            <a class="navbar-button" asp-controller="Expense" asp-action="Index">Expenses</a>
+                        </li>
+
+                        <li class="navitem">
+                            <a class="navbar-button" asp-controller="Transfer" asp-action="Index">Transfers</a>
+                        </li>
+
+                        <li class="navitem">
+                            <a class="navbar-button" asp-controller="Income" asp-action="Index">Income</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_BudgetResetDateUpdate" />
+
+
+
+    @await RenderSectionAsync("Jquery", required: false)
+    @await RenderSectionAsync("JqueryMultipleSelect", required: false)
+    @await RenderSectionAsync("MultipleSelect", required: false)
+    
+    @await RenderSectionAsync("PeriodScript",required: false)
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("TransferScript", required: false)
+    @await RenderSectionAsync("SetDateOnSubmission" , required: false)
+</body>
+</html>
