@@ -25,10 +25,6 @@ namespace ExpenseTracker.BLL
             query = specification.Includes.Aggregate(query, (current, include) => current.Include(include));
 
 
-            if (specification.PageNo > 0 && specification.PageSize > 0)
-            {
-                query = query.Skip((specification.PageNo - 1) * specification.PageSize).Take(specification.PageSize);
-            }
             return query;
         }
     }

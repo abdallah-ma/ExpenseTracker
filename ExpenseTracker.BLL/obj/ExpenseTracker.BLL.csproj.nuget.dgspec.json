@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {}
+    "D:\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {
+    "D:\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
+        "projectUniqueName": "D:\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
         "projectName": "ExpenseTracker.BLL",
-        "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
+        "projectPath": "D:\\ExpenseTracker\\ExpenseTracker.BLL\\ExpenseTracker.BLL.csproj",
         "packagesPath": "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.BLL\\obj\\",
+        "outputPath": "D:\\ExpenseTracker\\ExpenseTracker.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\visual studio shared comp\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj": {
-                "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj"
+              "D:\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj": {
+                "projectPath": "D:\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj": {
+    "D:\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj",
+        "projectUniqueName": "D:\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj",
         "projectName": "ExpenseTracker.DAL",
-        "projectPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj",
+        "projectPath": "D:\\ExpenseTracker\\ExpenseTracker.DAL\\ExpenseTracker.DAL.csproj",
         "packagesPath": "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker.DAL\\obj\\",
+        "outputPath": "D:\\ExpenseTracker\\ExpenseTracker.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\visual studio shared comp\\NuGetPackages"

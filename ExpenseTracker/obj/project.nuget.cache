@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XlHGmkdLr6U=",
+  "dgSpecHash": "s7BCmhN/iwY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abdallah Mahmoud\\source\\repos\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj",
+  "projectFilePath": "D:\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.PL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Abdallah Mahmoud\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

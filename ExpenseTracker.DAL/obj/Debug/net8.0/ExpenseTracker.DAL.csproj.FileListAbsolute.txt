@@ -26,3 +26,18 @@ C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.DAL\obj\Deb
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.pdb
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.genruntimeconfig.cache
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ref\ExpenseTracker.DAL.dll
+D:\ExpenseTracker\ExpenseTracker.DAL\bin\Debug\net8.0\ExpenseTracker.DAL.deps.json
+D:\ExpenseTracker\ExpenseTracker.DAL\bin\Debug\net8.0\ExpenseTracker.DAL.runtimeconfig.json
+D:\ExpenseTracker\ExpenseTracker.DAL\bin\Debug\net8.0\ExpenseTracker.DAL.dll
+D:\ExpenseTracker\ExpenseTracker.DAL\bin\Debug\net8.0\ExpenseTracker.DAL.pdb
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.csproj.AssemblyReference.cache
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.AssemblyInfoInputs.cache
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.AssemblyInfo.cs
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.csproj.CoreCompileInputs.cache
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.sourcelink.json
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.dll
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\refint\ExpenseTracker.DAL.dll
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.pdb
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ExpenseTracker.DAL.genruntimeconfig.cache
+D:\ExpenseTracker\ExpenseTracker.DAL\obj\Debug\net8.0\ref\ExpenseTracker.DAL.dll

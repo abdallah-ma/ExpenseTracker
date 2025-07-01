@@ -13,3 +13,19 @@ C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Deb
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\refint\ExpenseTracker.BLL.dll
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.pdb
 C:\Users\Abdallah Mahmoud\source\repos\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ref\ExpenseTracker.BLL.dll
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.csproj.AssemblyReference.cache
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.AssemblyInfoInputs.cache
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.AssemblyInfo.cs
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.csproj.CoreCompileInputs.cache
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.sourcelink.json
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.dll
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\refint\ExpenseTracker.BLL.dll
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseTracker.BLL.pdb
+D:\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.deps.json
+D:\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.dll
+D:\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.BLL.pdb
+D:\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.DAL.dll
+D:\ExpenseTracker\ExpenseTracker.BLL\bin\Debug\net8.0\ExpenseTracker.DAL.pdb
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ExpenseT.05C824B1.Up2Date
+D:\ExpenseTracker\ExpenseTracker.BLL\obj\Debug\net8.0\ref\ExpenseTracker.BLL.dll
