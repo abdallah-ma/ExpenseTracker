@@ -3,10 +3,8 @@ using ExpenseTracker.BLL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ExpenseTracker.DAL.Models;
 using ExpenseTracker.PL.ViewModels;
-using ExpenseTracker.BLL.Repositories;
-using System.Linq;
-using System.Text.Json;
-using System.Linq.Expressions;
+using ExpenseTracker.PL.ViewSpecifications;
+using ExpenseTracker.BLL;
 using ExpenseTracker.BLL.Specifications;
 
 namespace ExpenseTracker.PL.Controllers
@@ -17,10 +15,15 @@ namespace ExpenseTracker.PL.Controllers
         {
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult<Pagination<Budget> > > Index(BudgetSpecifications spec)
         {
-            var Budgets = await _UnitOfWork.BudgetRepository.GetAllAsync();
-            return View(Budgets);
+            var FilterSpecification = new FilteredBudgetSpecifications(spec.Name , spec.MinLimit,spec.MaxLimit,spec.Account,spec.PageIndex);
+
+            var Count = await _UnitOfWork.BudgetRepository.GetCountAsync(FilterSpecification);
+
+            var Budgets = await _UnitOfWork.BudgetRepository.GetAllAsyncWithSpec(FilterSpecification) as IReadOnlyList<Budget>;
+            
+            return View(new Pagination<Budget>() { Items = Budgets, Count = Count, PageNo = spec.PageIndex, PageSize = spec.PageSize });
         }
 
 

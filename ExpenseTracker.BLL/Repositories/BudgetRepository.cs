@@ -32,7 +32,6 @@ namespace ExpenseTracker.BLL.Repositories
             foreach (var Account in budget.Accounts)
             {
 
-                var Spec = new ExpenseSpecification(E => E.AccountName == Account.Name && E.Category == budget.Category);
 
                 _dbContext.Entry(Account).State = EntityState.Unchanged;
 

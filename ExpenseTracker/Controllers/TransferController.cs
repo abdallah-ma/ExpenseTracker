@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using ExpenseTracker.BLL;
 using ExpenseTracker.BLL.Interfaces;
 using ExpenseTracker.BLL.Specifications;
 using ExpenseTracker.DAL.Models;
 using ExpenseTracker.PL.ViewModels;
+using ExpenseTracker.PL.ViewSpecifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExpenseTracker.PL.Controllers
@@ -14,10 +16,15 @@ namespace ExpenseTracker.PL.Controllers
         {
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult<Pagination<Transfer> > > Index(TransferSpecifications spec)
         {
-            var Transfers = await _UnitOfWork.TransferRepository.GetAllAsync();
-            return View(Transfers);
+            var FilterSpecifications = new FilteredTransferSpecifications(spec.SourceAccountName , spec.RecipientAccountName , spec.MinAmount , spec.MaxAmount , spec.MinDate ,spec.MaxDate ,spec.PageIndex);
+
+            var Transfers = await _UnitOfWork.TransferRepository.GetAllAsyncWithSpec(FilterSpecifications) as IReadOnlyList<Transfer>;
+
+            var Count = await _UnitOfWork.TransferRepository.GetCountAsync(FilterSpecifications);
+
+            return View(new Pagination<Transfer>(){Items = Transfers , Count = Count , PageNo = spec.PageIndex , PageSize = spec.PageSize });
         }
 
 

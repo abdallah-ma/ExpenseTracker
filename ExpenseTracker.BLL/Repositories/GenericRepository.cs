@@ -15,7 +15,7 @@ namespace ExpenseTracker.BLL.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-         protected readonly AppDbContext _dbContext;
+        protected readonly AppDbContext _dbContext;
 
         public GenericRepository(AppDbContext dbContext)
         {
@@ -25,7 +25,7 @@ namespace ExpenseTracker.BLL.Repository
         public virtual async Task AddAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
-            
+
         }
 
         public virtual async Task DeleteAsync(T entity)
@@ -67,12 +67,18 @@ namespace ExpenseTracker.BLL.Repository
             return SpecificationEvaluator<T>.GetQuery(_dbContext.Set<T>().AsQueryable(), spec);
         }
 
-        async Task IGenericRepository<T>.DeleteAsync(T Entity)
-        {
-            _dbContext.Set<T>().Remove(Entity);
-            await Task.CompletedTask;
-        }
 
+        public Task<int> GetCountAsync(ISpecification<T> spec)
+        {
+            var query = _dbContext.Set<T>().AsQueryable();
+
+            if(spec.Criteria != null)
+            {
+                query = query.Where(spec.Criteria);
+            }
+
+            return query.CountAsync();
+        }
         
     }
 }

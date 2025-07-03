@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using ExpenseTracker.BLL;
 using ExpenseTracker.BLL.Interfaces;
 using ExpenseTracker.BLL.Specifications;
 using ExpenseTracker.DAL.Models;
 using ExpenseTracker.PL.ViewModels;
+using ExpenseTracker.PL.ViewSpecifications;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace ExpenseTracker.PL.Controllers
 {
@@ -15,10 +16,16 @@ namespace ExpenseTracker.PL.Controllers
         {
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult<Pagination<Income> > > Index(IncomeSpecifications spec)
         {
-            var Incomes = await _UnitOfWork.IncomeRepository.GetAllAsync();
-            return View(Incomes);
+
+            var FilterSpecifications = new FilteredIncomeSpecifications(spec.MinAmount , spec.MaxAmount , spec.MinDate , spec.MaxDate , spec.AccountName , spec.PageIndex);
+
+            var Incomes = await _UnitOfWork.IncomeRepository.GetAllAsyncWithSpec(FilterSpecifications) as IReadOnlyList<Income>;
+
+            var Count = await _UnitOfWork.IncomeRepository.GetCountAsync(FilterSpecifications);
+
+            return View(new Pagination<Income>() {Items = Incomes , Count = Count , PageNo = spec.PageIndex , PageSize = spec.PageSize});
         }
         
         public IActionResult Create()

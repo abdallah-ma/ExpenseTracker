@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Transfer>
+﻿@model Pagination<Transfer>
 @inject IUnitOfWork UnitOfWork
 
 
@@ -13,16 +13,16 @@
 </div>
 
 
-@if (Model.Count() > 0)
+@if (Model.Items.Count() > 0)
 {
 
     <table>
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(A => A.SourceAccountName)</th>
-                <th>@Html.DisplayNameFor(A => A.RecipientAccountName)</th>
-                <th>@Html.DisplayNameFor(A => A.Amount)</th>
-                <th>@Html.DisplayNameFor(A => A.Date)</th>
+                <th>SourceAccountName</th>
+                <th>RecipientAccountName</th>
+                <th>Amount</th>
+                <th>Date</th>
 
 
             </tr>
@@ -31,7 +31,7 @@
         </thead>
 
         <tbody>
-            @foreach (var Transfer in Model)
+            @foreach (var Transfer in Model.Items)
             {
                 <tr>
                     <td hidden>@Transfer.Id</td>
@@ -65,9 +65,27 @@
 
     </table>
 
+<div class="pagination">
+  @{
+    var TotalPages = (Model.Count + Model.PageSize - 1) / Model.PageSize;
+
+    if(Model.PageNo != 1){
+       <a asp-controller="Transfer" asp-action="Index" asp-route-PageIndex="@(Model.PageNo - 1)">&laquo;</a>
+    }
+
+    for(int i = 1;i<=TotalPages;i++){
+        <a asp-controller="Transfer" asp-action="Index" asp-route-PageIndex = "@i">@i</a>
+    }
+
+    if(Model.PageNo != TotalPages){
+        <a asp-controller="Transfer" asp-action="Index" asp-route-PageIndex="@(Model.PageNo + 1)">&raquo;</a>
+    }
+
+  }
+</div>
 
 }
 else
 {
-    <h1>No Accounts</h1>
+    <h1>No Transfers</h1>
 }

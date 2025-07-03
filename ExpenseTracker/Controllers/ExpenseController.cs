@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using ExpenseTracker.BLL;
 using ExpenseTracker.BLL.Interfaces;
 using ExpenseTracker.BLL.Specifications;
 using ExpenseTracker.DAL.Models;
 using ExpenseTracker.PL.ViewModels;
+using ExpenseTracker.PL.ViewSpecifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExpenseTracker.PL.Controllers
@@ -13,10 +15,16 @@ namespace ExpenseTracker.PL.Controllers
         public ExpenseController(IMapper mapper, IUnitOfWork unitOfWork) : base(mapper, unitOfWork)
         {
         }
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult < Pagination<Expense> > > Index(ExpenseSpecifications spec)
         {
-            var Expenses = await _UnitOfWork.ExpenseRepository.GetAllAsync();
-            return View(Expenses);
+
+            var FilterSpecifications = new FilteredExpenseSpecifications(spec.MinAmount , spec.MaxAmount , spec.MinDate , spec.MaxDate , spec.Category , spec.AccountName , spec.PageIndex);
+
+            var Expenses = await _UnitOfWork.ExpenseRepository.GetAllAsyncWithSpec(FilterSpecifications) as IReadOnlyList<Expense>;
+
+            var Count = await _UnitOfWork.ExpenseRepository.GetCountAsync(FilterSpecifications);
+
+            return View(new Pagination<Expense>() {Items = Expenses , Count = Count , PageNo = spec.PageIndex , PageSize = spec.PageSize});
         }
 
 

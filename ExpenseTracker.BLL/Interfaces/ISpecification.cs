@@ -15,7 +15,8 @@ namespace ExpenseTracker.BLL.Interfaces
 
         public List<Expression<Func<T, object>>> Includes { get; set; }
 
-        
+        public int Skip { get; set; }
+        public int Take { get; set; }
 
     }
 }

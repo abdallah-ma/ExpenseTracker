@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExpenseTracker.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c087e0b9ae620c6c87d610b0bf4cd3bcc6fe536")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d12d645cd1177d53ac2cab9f82c970fd20bec8f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExpenseTracker.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExpenseTracker.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

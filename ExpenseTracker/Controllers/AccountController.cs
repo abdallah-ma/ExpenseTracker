@@ -5,6 +5,8 @@ using ExpenseTracker.DAL.Models;
 using ExpenseTracker.PL.ViewModels;
 using AutoMapper;
 using ExpenseTracker.BLL.Specifications;
+using ExpenseTracker.BLL;
+using ExpenseTracker.PL.ViewSpecifications;
 
 namespace ExpenseTracker.PL.Controllers
 {
@@ -18,15 +20,22 @@ namespace ExpenseTracker.PL.Controllers
 
         [HttpGet]
 
-        public async Task<IActionResult> Index(){
+        public async Task<IActionResult> Index(AccountSpecifications spec)
+        {
+
+            var FilterSpecifiactions = new FilteredAccountSpecifications(spec.MinBalance, spec.MaxBalance, spec.Name,spec.PageIndex);
             
-            var Accounts = await _UnitOfWork.AccountRepository.GetAllAsync();
-            return View(Accounts);
+            var Count = await _UnitOfWork.AccountRepository.GetCountAsync(FilterSpecifiactions);
+
+            var Account = await _UnitOfWork.AccountRepository.GetAllAsyncWithSpec(FilterSpecifiactions) as IReadOnlyList<Account>;
+
+
+            return View(new Pagination<Account> (){Items = Account , Count = Count , PageNo = spec.PageIndex});
 
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<ActionResult<Pagination<Account>>> Create()
         {
             return View();
         }
@@ -36,7 +45,7 @@ namespace ExpenseTracker.PL.Controllers
         {
             if (ModelState.IsValid)
             {
-                var MappedAccount = _Mapper.Map<AccountViewModel,Account>(account);
+                var MappedAccount = _Mapper.Map<AccountViewModel, Account>(account);
 
 
                 await _UnitOfWork.AccountRepository.AddAsync(MappedAccount);
@@ -53,14 +62,14 @@ namespace ExpenseTracker.PL.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
-                
-            
+
+
             if (id is null) return BadRequest();
 
             var Account = await _UnitOfWork.AccountRepository.GetAsync(id.Value);
-           
 
-            if(Account == null)return NotFound();
+
+            if (Account == null) return NotFound();
 
             var MappedAccount = _Mapper.Map<Account, AccountViewModel>(Account);
 
@@ -81,7 +90,7 @@ namespace ExpenseTracker.PL.Controllers
 
             var MappedAccount = _Mapper.Map<Account, AccountViewModel>(Account);
 
-             
+
 
             return View(MappedAccount);
 
@@ -94,7 +103,7 @@ namespace ExpenseTracker.PL.Controllers
             if (ModelState.IsValid)
             {
 
-                
+
 
                 var MappedAccount = _Mapper.Map<AccountViewModel, Account>(account);
 
@@ -113,10 +122,10 @@ namespace ExpenseTracker.PL.Controllers
         }
 
 
-        
+
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id is null) return NotFound(); 
+            if (id is null) return NotFound();
 
             var Account = await _UnitOfWork.AccountRepository.GetAsync(id.Value);
 
@@ -126,14 +135,14 @@ namespace ExpenseTracker.PL.Controllers
 
             await _UnitOfWork.CompleteAsync();
 
-            return RedirectToAction(nameof(Index) , controllerName:"Account");
+            return RedirectToAction(nameof(Index), controllerName: "Account");
         }
 
-       
+
 
 
     }
 
-    
+
 
 }

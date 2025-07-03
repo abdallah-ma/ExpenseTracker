@@ -22,7 +22,15 @@ namespace ExpenseTracker.BLL
                 query = query.Where(specification.Criteria);
             }
 
+
+
             query = specification.Includes.Aggregate(query, (current, include) => current.Include(include));
+
+
+          
+            
+            query = query.Skip(specification.Skip).Take(specification.Take);
+            
 
 
             return query;
